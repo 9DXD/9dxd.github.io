@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css\css.css">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <title>Hidden</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="hidden.php"><em>Home</em>
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Q&A.php">Q&A</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </li>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Add spacing between buttons and nav -->
+    <div class="more-custom-spacing"></div>
+
+    <!--<button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-link">Link</button>
+
+    <div class="more-custom-spacing"></div>-->
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">You have found the hidden page!</h1>
+        <p class="lead text-muted">Boost your cybersecurity know-how and stay safe online with our website.</p>
+        <p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+    </section>
+    
+    <!-- Add spacing between areas -->
+    <div class="more-custom-spacing"></div>
+
+    <div class='container'>
+      <div class='row justify-content-center'>
+        <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
+          <div class="card-header">Cyber</div>
+          <div class="card-body">
+            <h4 class="card-title">Tabnabbing</h4>
+            <p class="card-text">Tabnabbing is a computer exploit and phishing attack, which persuades users to submit their login details and passwords to popular websites by impersonating those sites and convincing the user that the site is genuine. The attack's name was coined in early 2010 by Aza Raskin, a security researcher and design expert.</p>
+          </div>
+          <div class="card-footer"><a class='btn btn-link' href='\tabnabbing\NSC.html'>Ex. Website</a></div>
+        </div>
+        
+        <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
+          <div class="card-header">Cyber</div>
+          <div class="card-body">
+            <h4 class="card-title">Link Manipulation</h4>
+            <p class="card-text">Link Manipulation is creating fake links that appear to be from a legitimate organization. These links may use misspelled URLs or subdomains to deceive the user.</p>
+          </div>
+          <div class="card-footer">Card footer</div>
+        </div>
+        
+        <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h4 class="card-title">Dark card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <div class="card-footer">Card footer</div>
+        </div>
+        
+        <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h4 class="card-title">Dark card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <div class="card-footer">Card footer</div>
+        </div>
+        
+        <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h4 class="card-title">Dark card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <div class="card-footer">Card footer</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
