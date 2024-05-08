@@ -52,89 +52,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      </nav>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="hidden.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="Q&A.html"><em>Q&A</em>
-                <span class="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
-            </li>
-          </ul>
-
-          <form class="d-flex">
-            <input class="form-control me-sm-2" type="search" placeholder="Search">
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Add spacing between buttons and nav -->
     <div class="more-custom-spacing"></div>
 
-    <!--<button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-    <button type="button" class="btn btn-link">Link</button>
-
-    <div class="more-custom-spacing"></div>-->
-
     <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading">Welcome to Q&A!</h1>
-        <p class="lead text-muted">You can ask any question and I will answer to the best of my abilities.</p>
-        <p>
-        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
-      </div>
-    </section>
+      </section>
 
     <div class="more-custom-spacing"></div>
 
     <form class="custom-form" method="post" action="Q&A.html">
-        <input autocomplete="off" type="text" name="username" class="form-control mb-2" placeholder="Username" aria-label="Username" aria-describedby="button-addon2">
-        <input autocomplete="off" type="text" name="question" class="form-control" placeholder="Question" aria-label="Question" aria-describedby="button-addon2" required>
-        <button class="btn btn-primary mt-2" type="Submit" id="button-addon2">Submit</button>
+      <input autocomplete="off" type="text" name="username" class="form-control mb-2" placeholder="Username" aria-label="Username" aria-describedby="button-addon2">
+      <input autocomplete="off" type="text" name="question" class="form-control" placeholder="Question" aria-label="Question" aria-describedby="button-addon2" required>
+      <button class="btn btn-primary mt-2" type="Submit" id="button-addon2">Submit</button>
     </form>
-    </div>
 
     <div class="more-custom-spacing"></div>
 
     <div class='container'>
-      <div class='row justify-content-center' id='qa-container'> <!-- Display it in here -->
-
-        <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
+      <div class='row justify-content-center' id='qa-container'> <div class="card border-dark mb-3 mx-2" style="max-width: 20rem;">
           <div class="card-header">Q&A</div>
           <div class="card-body">
             <h6 class="card-title"><strong>[username]'s Question: [Question]</strong></h6>
@@ -152,7 +88,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $("form.custom-form").submit(function(e) {
           e.preventDefault(); // Prevent the default form submission
 
-          // Perform an AJAX request to handle form submission
+          var username = $(this).find('input[name="username"]').val().trim();
+          var question = $(this).find('input[name="question"]').val().trim();
+
+          // Construct the Google Forms link
+          var googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSdoUuskaiRlkbu4hMNfO6gLdO_g0Oxqqd-sU0qA3Zc70DsOjg/formResponse?&submit=Submit?&entry.1435323832=";
+          googleFormLink += username ? username : "Unkown_User";
+          googleFormLink += "&entry.2139638544=" + question;
+
+          // Perform an AJAX request to handle form submission (original logic preserved)
           $.ajax({
             type: $(this).attr('method'),
             url: $(this).attr('action'),
