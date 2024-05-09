@@ -108,28 +108,17 @@
         // Intercept form submission
         $("form.custom-form").submit(function(e) {
           e.preventDefault(); // Prevent the default form submission
-
+      
           var username = $(this).find('input[name="username"]').val().trim();
           var question = $(this).find('input[name="question"]').val().trim();
-
+      
           // Construct the Google Forms link
           var googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSdoUuskaiRlkbu4hMNfO6gLdO_g0Oxqqd-sU0qA3Zc70DsOjg/formResponse?&submit=Submit?&entry.1435323832=";
           googleFormLink += username ? username : "Unkown_User";
           googleFormLink += "&entry.2139638544=" + question;
-
-          // Perform an AJAX request to handle form submission (original logic preserved)
-          $.ajax({
-            type: $(this).attr('method'),
-            url: $(this).attr('action'),
-            data: $(this).serialize(),
-            dataType: 'json',
-            success: function(response) {
-              if (response.success) {
-                // Append the new Q&A entry to the container
-                $("#qa-container").append(response.html);
-              }
-            }
-          });
+      
+          // Open the Google Form link in a new tab
+          window.open(googleFormLink, '_blank');
         });
       });
     </script>
