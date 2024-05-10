@@ -1,1 +1,1 @@
-I recommend checking the *LAN*
+I recommend checking the *LAN* in details.
